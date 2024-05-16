@@ -44,7 +44,10 @@ test:
     - jarvis_leaderboard
   commands:
     - pip check
-    - python jarvis_leaderboard/jarvis_leaderboard/rebuild.py
+    - ls
+    - ls */
+    - pwd
+    - python rebuild.py
   requires:
     - pip
 
