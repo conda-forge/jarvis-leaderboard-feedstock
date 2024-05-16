@@ -42,12 +42,9 @@ requirements:
 test:
   imports:
     - jarvis_leaderboard
+    - jarvis_leaderboard.rebuild
   commands:
     - pip check
-    - ls
-    - ls */
-    - pwd
-    - python rebuild.py
   requires:
     - pip
 
