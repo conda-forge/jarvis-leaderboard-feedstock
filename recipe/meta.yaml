@@ -43,6 +43,7 @@ test:
   imports:
     - jarvis_leaderboard
     - jarvis_leaderboard.rebuild
+    - jarvis_leaderboard.rebuild.rebuild_pages
   commands:
     - pip check
   requires:
