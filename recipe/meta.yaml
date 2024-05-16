@@ -1,13 +1,14 @@
 {% set name = "jarvis-leaderboard" %}
-{% set version = "2023.7.15" %}
+{% set version = "2024.2.26" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/jarvis_leaderboard-{{ version }}.tar.gz
-  sha256: 4786873d86ee2d9c1e9dfea48768c66f8668258c11340dc0a9953caa67ee73e0
+  url: https://github.com/usnistgov/jarvis-leaderboard/archive/refs/tags/v{{ version }}.tar.gz 
+  
+  sha256: 0697f273176960b6ef382a5f8fb73d78dd3c6e825f1dae1e6417b629718396ed
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
@@ -32,6 +33,7 @@ requirements:
     - evaluate ==0.4.0
     - nltk ==3.8.1
     - rouge-score ==0.1.2
+    - pymatgen
 
 test:
   imports:
