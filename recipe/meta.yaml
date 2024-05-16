@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/usnistgov/jarvis-leaderboard/archive/refs/tags/v{{ version }}.tar.gz 
+  url: https://github.com/usnistgov/jarvis_leaderboard/archive/refs/tags/v{{ version }}.tar.gz 
   
   sha256: 0697f273176960b6ef382a5f8fb73d78dd3c6e825f1dae1e6417b629718396ed
 
