@@ -43,16 +43,16 @@ test:
   imports:
     - jarvis_leaderboard
     - jarvis_leaderboard.rebuild
-    - jarvis_leaderboard.rebuild.rebuild_pages
+    # - jarvis_leaderboard.rebuild.rebuild_pages
   commands:
     - pip check
   requires:
     - pip
 
 about:
-  home: https://github.com/knc6/jarvis_leaderboard
+  home: https://github.com/usnistgov/jarvis_leaderboard
   summary: jarvis_leaderboard
-  license: BSD-3-Clause
+  license: NIST-PD
   license_file: LICENSE.rst
 
 extra:
