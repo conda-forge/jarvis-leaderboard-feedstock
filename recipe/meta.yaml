@@ -28,8 +28,8 @@ requirements:
     - pandas >=1.2.4
     # - mkdocs >=1.6.0
     # - mkdocs-material >=9.0.5
-    - mkdocs 
-    - mkdocs-material 
+    - mkdocs =1.5.3
+    - mkdocs-material ==9.5.14
     - pydantic >=1.8.1
     - markdown ==3.2.1
     - absl-py ==1.4.0
