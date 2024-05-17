@@ -50,7 +50,8 @@ test:
     - jarvis_leaderboard.rebuild
   commands:
     - pip check
-    - python -c "from jarvis_leaderboard.rebuild.rebuild_pages;rebuild_pages()"
+    - python -c "from jarvis_leaderboard.rebuild import rebuild_pages; rebuild_pages()"
+
 
 
 about:
