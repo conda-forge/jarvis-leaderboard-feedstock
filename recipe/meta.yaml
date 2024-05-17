@@ -36,8 +36,8 @@ requirements:
     - pymatgen
     - lammps
     - gpaw
-    - abinit
-    - abipy
+    # - abinit
+    # - abipy
     - alignn
     - qe
     - atomman
