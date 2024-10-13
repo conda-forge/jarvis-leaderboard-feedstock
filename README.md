@@ -3,9 +3,9 @@ About jarvis-leaderboard-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/jarvis-leaderboard-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/knc6/jarvis_leaderboard
+Home: https://github.com/usnistgov/jarvis_leaderboard
 
-Package license: BSD-3-Clause
+Package license: NIST-PD
 
 Summary: jarvis_leaderboard
 
@@ -144,4 +144,5 @@ Feedstock Maintainers
 =====================
 
 * [@jan-janssen](https://github.com/jan-janssen/)
+* [@knc6](https://github.com/knc6/)
 
