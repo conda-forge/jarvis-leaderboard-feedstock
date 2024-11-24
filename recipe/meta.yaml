@@ -1,5 +1,5 @@
 {% set name = "jarvis-leaderboard" %}
-{% set version = "2024.10.10" %}
+{% set version = "2024.10.30" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   url: https://github.com/usnistgov/jarvis_leaderboard/archive/refs/tags/v{{ version }}.tar.gz
 
-  sha256: 985f6238371df7b5c9215d099e0e7d9e2e01b2fd95acaa839408e9d9e8fc88e4
+  sha256: 72fb6570bb0d50609a4b065686a73a80d98a589fb005b168cc38fc6c4eb5f42d
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
@@ -21,6 +21,7 @@ requirements:
     - setuptools
     - pip
   run:
+    - plotly
     - python >=3.8
     - numpy >=1.19.5
     - scipy >=1.6.3
@@ -29,11 +30,11 @@ requirements:
     - pandas >=1.2.4
     - mkdocs =1.5.3
     - mkdocs-material ==9.5.14
-    - pydantic >=1.8.1
-    - markdown ==3.2.1
+    - pydantic >=2.3.0
+    - markdown >=3.2.1
     - absl-py ==1.4.0
-    - nltk =3.8.1
-    - rouge
+    - nltk ==3.8.1
+    - rouge >=1.0.1
     - pymatgen
     - lammps
     - gpaw
