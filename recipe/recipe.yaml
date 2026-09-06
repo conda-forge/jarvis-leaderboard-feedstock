@@ -1,28 +1,30 @@
-{% set name = "jarvis-leaderboard" %}
-{% set version = "2024.10.30" %}
+schema_version: 1
+
+context:
+  name: jarvis-leaderboard
+  version: "2024.10.30"
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: ${{ name|lower }}
+  version: ${{ version }}
 
 source:
-  url: https://github.com/usnistgov/jarvis_leaderboard/archive/refs/tags/v{{ version }}.tar.gz
-
+  url: https://github.com/usnistgov/jarvis_leaderboard/archive/refs/tags/v${{ version }}.tar.gz
   sha256: 72fb6570bb0d50609a4b065686a73a80d98a589fb005b168cc38fc6c4eb5f42d
 
 build:
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 2
   noarch: python
-  number: 1
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
-    - python {{ python_min }}
+    - python ${{ python_min }}.*
     - setuptools
     - pip
   run:
     - plotly
-    - python >={{ python_min }}
+    - python >=${{ python_min }}
     - numpy >=1.19.5
     - scipy >=1.6.3
     - jarvis-tools >=2021.07.19
@@ -47,27 +49,21 @@ requirements:
     # - absl-py ==1.4.0
     # - evaluate ==0.4.0
     # - mkdocs >=1.6.0
-    # - mkdocs-material >=9.0.5  
+    # - mkdocs-material >=9.0.5
 
-test:
-  requires:
-    - pip
-    - pytest
-    - python {{ python_min }}
-  imports:
-    - jarvis_leaderboard
-    - jarvis_leaderboard.rebuild
-  commands:
-    - pip check
-    # - python -c "from jarvis_leaderboard.rebuild import rebuild_pages; rebuild_pages()"
-
-
+tests:
+  - python:
+      imports:
+        - jarvis_leaderboard
+        - jarvis_leaderboard.rebuild
+      pip_check: true
+      python_version: ${{ python_min }}
 
 about:
-  home: https://github.com/usnistgov/jarvis_leaderboard
   summary: jarvis_leaderboard
   license: NIST-PD
   license_file: LICENSE.rst
+  homepage: https://github.com/usnistgov/jarvis_leaderboard
 
 extra:
   recipe-maintainers:
